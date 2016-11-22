@@ -1,0 +1,56 @@
+public class Odev {
+
+    public static void main(String[] args) {
+   
+       char C [] ={'A','B','C','D','F','G','H','I','J','K','L','M','N','O'};
+		char [][]dizi=new char[5][5];
+		for(int i=0;i<5;i++){
+			for(int j=0;j<5;j++){
+			dizi[i][j]=C[(int)(Math.random()*C.length)];
+					    }
+   			   	     }
+		int sayac=-1;
+		int sayac2=-1;
+		int yer=0,yer1=0;
+		for(int i=0;i<5;i++){
+		{sayac=-1;
+			for(int j=0;j<5;j++)
+			{
+				for(int k=0;k<5;k++)
+				{
+					for(int m=0;m<5;m++)
+					{
+						if(dizi[i][j]==dizi[k][m])
+						{
+						sayac++;
+						}
+				
+					}
+				}
+			if(sayac>sayac2) 
+			{
+			sayac2=sayac;
+			yer=i;
+			yer1=j;
+                        
+			}	
+                        sayac=0;	
+			}
+                        for (int j = 0; j < 10; j++) {
+                        
+                    }
+   		}
+                
+                    for (int j = 0; j < 5; j++) {
+                         System.out.print(dizi[i][j]+"\t");
+                    }
+                    System.out.println("");
+             System.out.println();
+        }
+               
+               System.out.println("*************************************************************");
+		System.out.println("En çok tekrar eden "+dizi[yer][yer1]+" karakteri.");	
+                System.out.println("\n"+sayac2+" defa tekrar ediyor.");
+                System.out.println("");
+}
+}
